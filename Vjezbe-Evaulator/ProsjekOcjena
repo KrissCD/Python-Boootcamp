@@ -1,0 +1,23 @@
+ocjene = list(map(int, input().split()))
+
+def main():
+    if 1 in ocjene:
+        print("Učenik nije položio!")
+        count = ocjene.count(1)
+        print(f"Broj jedinica: {count}")
+        return
+    prosjek = sum(ocjene) / len(ocjene)
+    print(f"Prosjek ocjena: {round(prosjek, 2)}")  
+    if 4.5 <= prosjek <= 5:
+        print("Odličan")
+    elif 3.5 <= prosjek < 4.5: 
+        print("Vrlo dobar")
+    elif 2.5 <= prosjek < 3.5:
+        print("Dobar")
+    elif 1.5 <= prosjek < 2.5:
+        print("Dovoljan")
+    else:
+        print("Nevažeća ocjena!")
+
+if __name__ == "__main__":
+    main()
