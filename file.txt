@@ -1,0 +1,3 @@
+Ovo je moj prvi tekst u datoteci.
+Ovo je moj drugi tekst u datoteci.
+Ovo je moj treci tekst u datoteci.
