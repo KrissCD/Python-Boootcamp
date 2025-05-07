@@ -22,6 +22,6 @@ trazeni_broj = int(input("Unesite broj koji želite pronaći: "))
 rezultat, koraci = binarno(brojevi, trazeni_broj)
 
 if rezultat != -1:
-    print(f"Broj {trazeni_broj} pronađen na indeksu {rezultat} nakon {koraci} koraka.")
+    print(f"Broj {trazeni_broj} je pronađen na indeksu {rezultat} nakon {koraci} koraka.")
 else:
     print(f"Broj {trazeni_broj} nije pronađen u listi nakon {koraci} koraka.")
