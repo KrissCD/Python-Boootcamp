@@ -1,4 +1,4 @@
-brojevi = list(map(int, input("Unesite brojeve odvojene razmakom: ").split()))
+brojevi = list(map(str, input("Unesite rijeci odvojene razmakom: ").split()))
 x = input("Unesite riječ koju želite da pretražite: ")
 
 def linear_search(brojevi, x):
@@ -9,6 +9,6 @@ def linear_search(brojevi, x):
 
 result = linear_search(brojevi, x)
 if result == -1:
-    print("Element nije pronađen")
+    print("rijec nije pronađen")
 else:
-    print("Element pronađen na indeksu: ", result)
+    print("rijec pronađen na indeksu: ", result)
