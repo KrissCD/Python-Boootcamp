@@ -1,0 +1,20 @@
+Ovo je prvi red!
+Kristian Pernjek
+1
+2
+3
+4
+5
+pernjek
+ctk
+rijeka
+& "C:/Program Files/Python313/python.exe" c:/Users/CTK/Documents/GitHub/Python-Boootcamp/Vjezbe-Python/Datoteke/PametnaEvidencija.py
+rijeka
+zagreb
+hsshhs
+fgf
+Kristian, Pernjek, 25
+,,
+kristian,pernjek,5
+dinko,obradovic,25
+pero,peric,1
