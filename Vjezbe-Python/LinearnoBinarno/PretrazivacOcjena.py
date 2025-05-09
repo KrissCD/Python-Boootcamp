@@ -2,7 +2,7 @@ import random
 import math
 
 #ocjene = list(map(int, input("Unesite broj brojeva: ").split()))
-ocjene = [random.randint(1, 10000) for _ in range(n)]
+ocjene = [random.randint(1, 10000) for _ in range()]
 print("1. Linearno pretraživanje")
 print("2. Binarno pretraživanje")
 x = int(input("Unesite nacin pretrazivanja: "))
