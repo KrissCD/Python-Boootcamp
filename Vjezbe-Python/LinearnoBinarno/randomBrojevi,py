@@ -1,0 +1,59 @@
+import random
+import math
+
+# Generate a list of 10,000 random integers between 1 and 10,000
+ocjene = [random.randint(1, 10000) for _ in range(10000)]
+
+print("1. Linearno pretraživanje")
+print("2. Binarno pretraživanje")
+x = int(input("Unesite nacin pretrazivanja: "))
+
+if x == 1:
+    def linear_search(x, ocjene):
+        koraci = 0
+        for i in range(len(ocjene)):
+            koraci += 1
+            if ocjene[i] == x:
+                return i, koraci
+        return -1, koraci
+    
+    n = int(input("Unesite broj koji zelite pronaci: "))
+    result, koraci = linear_search(n, ocjene)
+    if result == -1:
+        print(f"Ocjena '{n}' nije pronađena u listi nakon {koraci} koraka.")
+        for i in range(len(ocjene)):
+            if ocjene[i] > n:
+                ocjene.insert(i, n)
+                break
+    else:
+        print(f"Ocjena '{n}' je pronađena na indeksu {result} nakon {koraci} koraka.")
+        ocjene[result] = n
+
+elif x == 2:
+    def binarno(lista, trazeni_broj):
+        lijevo = 0
+        desno = len(lista) - 1
+        koraci = 0  
+
+        while lijevo <= desno:
+            sredina = (lijevo + desno) // 2
+            koraci += 1
+
+            if lista[sredina] == trazeni_broj:
+                return sredina, koraci  
+            elif lista[sredina] < trazeni_broj:
+                lijevo = sredina + 1
+            else:
+                desno = sredina - 1
+
+        return -1, koraci  
+
+    n = int(input("Unesite broj koji zelite pronaci: "))
+    ocjene.sort()
+    result, koraci = binarno(ocjene, n)
+    if result != -1:
+        print(f"Ocjena '{n}' je pronađena na indeksu {result} nakon {koraci} koraka.")
+    else:
+        print(f"Ocjena '{n}' nije pronađena u listi nakon {koraci} koraka.")
+
+print(ocjene)
