@@ -17,7 +17,7 @@ board_frame.grid(row=1, column=0, columnspan=3)
 
 # Style for the buttons
 style = ttk.Style()
-style.configure("TicTacToe.TButton", font=("Segoe UI", 28, "bold"))
+style.configure("TicTacToe.TButton", font=("Segoe UI", 25, "bold"))
 
 buttons = [[None for _ in range(3)] for _ in range(3)]
 current_player = ["X"]
