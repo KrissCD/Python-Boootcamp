@@ -25,4 +25,27 @@ for i in range(n):
         zadnji_bodovi = bodovi
     rang_lista.append((mjesto, ime, prezime, bodovi))
 
-print(rang_lista)
+w1 = max(len(str(m)) for m, _, _, _ in rang_lista)
+w2 = max(len(ime) + 1 + len(prezime) for _, ime, prezime, _ in rang_lista)
+w3 = max(len(str(b)) for _, _, _, b in rang_lista) + len(" / 400")
+
+sirina = 2 + w1 + 3 + w2 + 3 + w3 + 2
+print("-" * sirina)
+
+for red in rang_lista:
+    mjesto = red[0]
+    ime = red[1]
+    prezime = red[2]
+    bodovi = red[3]
+
+    ime_prezime = ime + " " + prezime
+    bodovi_tekst = str(bodovi) + " / 400"
+
+    praznine_mjesto = " " * (w1 - len(str(mjesto)))
+    praznine_ime = " " * (w2 - len(ime_prezime))
+    praznine_bodovi = " " * (w3 - len(bodovi_tekst))
+
+    print("| " + praznine_mjesto + str(mjesto) + " | " + ime_prezime + praznine_ime + " | " + praznine_bodovi + bodovi_tekst + " |")
+
+# Ispis donje crte
+print("-" * sirina)
