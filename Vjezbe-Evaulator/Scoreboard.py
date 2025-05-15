@@ -46,6 +46,5 @@ for red in rang_lista:
     praznine_bodovi = " " * (w3 - len(bodovi_tekst))
 
     print("| " + praznine_mjesto + str(mjesto) + " | " + ime_prezime + praznine_ime + " | " + praznine_bodovi + bodovi_tekst + " |")
-
-# Ispis donje crte
+    
 print("-" * sirina)
